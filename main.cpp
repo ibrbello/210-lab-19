@@ -11,8 +11,18 @@ using namespace std;
 // 2. File input
 // 3. Vector of Movie objects
 
+// Movie class
+class Movie {
+    private:
+        string title;
+        Node review;
+    public:
+        string getTitle() const     {return title;}
+        void setTitle(string s)     {title = s;}
+};
 
-// Step 1: Node struct
+
+//  Node struct
 struct Node {
     // data
     double rating;
@@ -21,8 +31,10 @@ struct Node {
     Node *next;
 };
 
-// Step 2: Main function
 int main() {
+    vector<Movie> movies;
+    
+
     Node *head = nullptr;
     Node *current = head;
     // Ask whether the user wants to add node to head or tail
